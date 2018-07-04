@@ -180,7 +180,7 @@
                     <div class="slid-pad">
 
 
-                        <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+                        <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
 
@@ -573,8 +573,8 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="quick-pad">
-                                        <div class="quick-multi-carousel">
-                                            <div id="carouselExampleIndicatorsQuick" class="carousel slide" data-ride="carousel">
+                                        <div class="product-multi-carousel">
+                                            <div id="carouselExampleIndicatorsQuick" class="carousel slide" data-ride="carousel" data-interval="false">
                                                 <ol class="carousel-indicators">
                                                     <li data-target="#carouselExampleIndicatorsQuick" data-slide-to="0" class="active"><img src="images/product1.jpg"></li>
                                                     <li data-target="#carouselExampleIndicatorsQuick" data-slide-to="1"><img src="images/product2.jpg"></li>
@@ -601,7 +601,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="quick-desc">
+                                        <div class="product-desc">
                                             <div class="bxdetail">
 
                                                 <h2>Aquatic Ocean Blue</h2>
@@ -717,7 +717,7 @@
                     <div class="slid-pad">
 
 
-                        <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
+                        <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
 
@@ -1094,7 +1094,7 @@
                     <div class="slid-pad">
 
 
-                        <div id="carouselExampleControls4" class="carousel slide" data-ride="carousel">
+                        <div id="carouselExampleControls4" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
 
@@ -1594,5 +1594,12 @@
 
         </script>
         <!--Custom Chat Box-->
+        <!--Prevent auto slide in Carousel-->
+        <script>
+            $('.carousel').carousel({
+                interval: false;
+            });
+        </script>
+        <!--Prevent auto slide in Carousel-->
     </body>
 </html>
