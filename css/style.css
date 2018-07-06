@@ -688,6 +688,12 @@ body {
     font-size: 18px;
     vertical-align: bottom;
 }
+.slid h1 .timer small{
+    font-size: 14px;
+    font-weight: 500;
+    width: 50px;
+    display: inline-flex;
+}
 .slid h1 .see-all{
     color: #227fe6;
     text-decoration: none;

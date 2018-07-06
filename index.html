@@ -235,7 +235,45 @@
             </div>
             <div id="best-deals" class="slid">
                 <div class="container">
-                    <h1><span class="title">Today's Best Deals<mark class="timer"><i class="far fa-clock"></i>19:43:40</mark></span><a href="#" class="see-all">See All</a></h1>
+                    <h1><span class="title">Today's Best Deals<mark class="timer"><i class="far fa-clock"></i><small id="date_time"></small></mark></span><a href="#" class="see-all">See All</a>
+
+
+                        <script>
+                            function date_time(id)
+                            {
+                                date = new Date;
+                                year = date.getFullYear();
+                                month = date.getMonth();
+                                months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+                                d = date.getDate();
+                                day = date.getDay();
+                                days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+                                h = date.getHours();
+                                if(h<10)
+                                {
+                                    h = "0"+h;
+                                }
+                                m = date.getMinutes();
+                                if(m<10)
+                                {
+                                    m = "0"+m;
+                                }
+                                s = date.getSeconds();
+                                if(s<10)
+                                {
+                                    s = "0"+s;
+                                }
+                                result = ''+h+':'+m+':'+s;
+                                document.getElementById(id).innerHTML = result;
+                                setTimeout('date_time("'+id+'");','1000');
+                                return true;
+                            }
+                        </script>
+
+                        
+                        <script type="text/javascript">window.onload = date_time('date_time');</script>
+
+                    </h1>
 
                     <div class="slid-pad">
 
@@ -1012,7 +1050,7 @@
                                     <img src="images/product1.jpg" alt="Best Deal 1">
                                     <form method="get" action="cart.html"><button type="submit" class="btn btn-primary add-cart">
                                         Add to Cart
-                                    </button></form>
+                                        </button></form>
                                     <button type="button" class="btn btn-secondary quick-launch" data-toggle="modal" data-target="#exampleModalCenter">
                                         Quick View
                                     </button>
