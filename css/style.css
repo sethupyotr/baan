@@ -6,18 +6,26 @@ body {
     float: right;
 }
 
+.btn{}
+
 .btn-primary{
     background-color: #007bff!important;
+    border-color: #007bff!important;
     color: #fff!important;
     font-size: 13px;
     text-transform: uppercase;
+    box-shadow: none!important;
+    outline: none!important;
 }
 
 .btn-secondary{
     background-color: #fcf302!important;
+    border-color: #fcf302!important;
     color: #555!important;
     font-size: 13px;
     text-transform: uppercase;
+    box-shadow: none!important;
+    outline: none!important;
 }
 
 .form-control{
@@ -576,11 +584,11 @@ body {
         text-align: center;
         display: inline-flex;
         justify-content: center;
-        
+
     }
     #account #signup .dropdown-menu{
-    margin-right: 0;
-}
+        margin-right: 0;
+    }
 }
 
 @media only screen and (max-width: 567px) {
@@ -649,8 +657,8 @@ body {
         justify-content: center;
     }
     #account #signup .dropdown-menu{
-    margin-right: 0;
-}
+        margin-right: 0;
+    }
 }
 
 
@@ -1079,6 +1087,52 @@ body {
     margin-right: 10px;
 }
 
+@media only screen and (max-width: 990px) {
+    #featured-products .item-wrap{
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    #featured-products .item-wrap .items{
+        margin: 0;
+        width: 25%;
+        margin: 0 1% 2% 1%;
+        width: 48%;
+        flex: auto;
+    }
+    #featured-products .item-wrap .items:nth-child(odd){
+        margin-left: 0;
+    }
+    #featured-products .item-wrap .items:nth-child(even){
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #featured-products .item-wrap{
+        /*        flex-wrap: wrap;*/
+    }
+    #featured-products .item-wrap .items{
+        /*
+        margin: 1% 1% 1% 1%;
+        width: 48%;
+        flex: auto;
+        */
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    #featured-products .bximg .add-cart{
+        margin-left: 0;
+        font-size: 10px;
+        padding: 5px;
+    }
+    #featured-products .bximg .quick-launch{
+        margin-right: 0;
+        font-size: 10px;
+        padding: 5px;
+    }
+}
+
 #quick-view-detail{
     margin: 25px 0;
     text-align: center;
@@ -1270,6 +1324,14 @@ body {
     }
     .extra-details fieldset.scheduler-border:last-child{
         margin-left: 0!important;
+    }
+    
+    .product-multi-carousel{
+        margin-right: 0;
+    }
+    .product-desc{
+        margin-left: 0;
+        margin-top: 15px;
     }
 }
 
@@ -2319,6 +2381,12 @@ margin-left: 0;
         flex: auto;
         margin-right: 0;
     }
+    .my-cart tbody td{
+        font-size: 12px;
+    }
+    .my-cart .bximg{
+        height: 6rem;
+    }
     .order-summary{
         margin-left: 0;
         margin-top: 15px;
@@ -2328,4 +2396,68 @@ margin-left: 0;
     .order-summary .pad{
         flex: 1;
     }
+}
+
+@media only screen and (max-width: 767px) {
+    .my-cart .bximg{
+        height: 4rem;
+    }
+}
+
+.main-content{
+    position: relative;
+}
+
+#feed-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    z-index: 1;
+}
+#feed-wrap .popover .arrow{
+    display: none;
+}
+#feed-wrap .bs-popover-left{
+    margin-right: 0;
+    border: 0;
+    border-radius: 1px;
+}
+#feed-wrap .popover-body{
+    background-color: #555;
+    padding: 15px;
+    color: #fff;
+    font-size: 13px;
+}
+#feed-wrap .popover-body label{
+    margin-bottom: 5px;
+}
+#feed-wrap .popover-body .form-check-label{
+    font-size: 12px;
+}
+#feed-wrap .popover-body .form-control{
+    font-size: 13px;
+    width: 244px;
+
+}
+#feed-wrap .popover-body .form-group,
+#feed-wrap .popover-body .form-check{
+    margin-bottom: 10px;
+}
+#feed-wrap .popover-body .btn{
+    margin-right: 10px;
+}
+#feed-wrap button.popper2{
+    transform: rotate(270deg);
+    width: 90px;
+    height: 40px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    margin-right: -25px;
 }
